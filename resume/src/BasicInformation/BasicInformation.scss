@@ -1,0 +1,24 @@
+.main-label-input{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border:2px solid black;
+}
+
+.heading{
+    text-align: center;
+}
+
+.label-input{
+    margin:20px;
+    // border:2px solid red;
+    label{
+        display:block;
+        font-weight: 900;
+    }
+    input{
+        height:27px;
+        border-radius:8px;
+    }
+}
+
