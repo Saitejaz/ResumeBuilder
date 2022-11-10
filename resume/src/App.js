@@ -1,28 +1,34 @@
-import React,{useState} from "react";
-import './App.scss'
+import React, { useState } from "react";
+import "./App.scss";
 import BasicInformation from "./BasicInformation/BasicInformation";
 import Education from "./Education/Education";
-import { Route, Routes, useNavigate } from "react-router-dom"
+import { Route, Routes, useNavigate } from "react-router-dom";
 import About from "./About/About";
 import Certifications from "./Certifications/Certifications";
 import Experience from "./Experience/Experience";
 import Projects from "./Projects/Projects";
 import Editor from "./Editor/Editor";
 
-
 function App() {
+  const basicInfoDetials = {
+    fname: "nhj",
+    lname: "",
+    phoneNumber: "",
+    linkedin: "",
+    github: "",
+    email: "",
+  };
 
-  const[fname,setFname]=useState('');
+  const [basicdetails, setBasicdetails] = useState(basicInfoDetials);
   const navigate = useNavigate();
 
   const navigateto = (value) => {
-    navigate(`/${value}`)
-  }
+    navigate(`/${value}`);
+  };
 
   return (
     <div className="main-div">
       <ul>
-
         <button onClick={() => navigateto("")}>
           <li>Basic-information</li>
         </button>
@@ -36,36 +42,42 @@ function App() {
         </button>
 
         <button onClick={() => navigateto("experience")}>
-           <li>Experience</li>
+          <li>Experience</li>
         </button>
 
         <button onClick={() => navigateto("certifications")}>
-           <li>Certifications</li>
+          <li>Certifications</li>
         </button>
 
         <button onClick={() => navigateto("projects")}>
-           <li>Projects</li>
+          <li>Projects</li>
         </button>
       </ul>
-   <div className="editor-info">
-      <div className="info-display">
-        <Routes>
-          <Route index element={<BasicInformation fname={fname} setFname={setFname}/>}></Route>
-          <Route path="/education" element={<Education />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/certifications" element={<Certifications />}></Route>
-          <Route path="/experience" element={<Experience />}></Route>
-          <Route path="/projects" element={<Projects />}></Route>
-        </Routes>
-      </div>
+      <div className="editor-info">
+        <div className="info-display">
+          <Routes>
+            <Route
+              index
+              element={
+                <BasicInformation
+                  basicInfoDetails={basicdetails}
+                  setBasicdetails={setBasicdetails}
+                />
+              }
+            ></Route>
+            <Route path="/education" element={<Education />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/certifications" element={<Certifications />}></Route>
+            <Route path="/experience" element={<Experience />}></Route>
+            <Route path="/projects" element={<Projects />}></Route>
+          </Routes>
+        </div>
 
-      <div className="editor">
-          <Editor fname={fname}/>
-      </div>
+        <div className="editor">
+          <Editor />
+        </div>
       </div>
     </div>
-
-
   );
 }
 

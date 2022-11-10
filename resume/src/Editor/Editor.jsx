@@ -1,9 +1,13 @@
 import React from 'react'
 
-function Editor({fname}) {
+function Editor() {
   return (
     <div>
-         <h1>{fname}</h1>
+         <section className='basic-information-section'>
+            <div>
+              <h1></h1>
+            </div>
+         </section>
     </div>
   )
 }
