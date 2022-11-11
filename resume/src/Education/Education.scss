@@ -1,0 +1,21 @@
+.education-heading{
+    text-align: center;
+}
+.edu-label-input-div{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border:2px solid cyan;
+    
+}
+.edu-label-input{
+    margin:20px;
+    label{
+        display:block;
+        font-weight: 900;
+    }
+    input{
+        height:27px;
+        border-radius:8px;
+    }
+}

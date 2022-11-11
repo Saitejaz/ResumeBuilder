@@ -1,22 +1,32 @@
-import React  from 'react'
+import React, { useContext }  from 'react'
 import { useRef } from 'react'
 import "./BasicInformation.scss"
-function BasicInformation({setBasicdetails,...basicdetails}) {
+import {BasicDetailsContext} from "../CustomHooks/CustomHookdetails"
+function BasicInformation() {
    
+    const [basicInfoDetails,setBasicInfoDetails] = useContext(BasicDetailsContext);
 
     const firstname = useRef();
-    const lname = useRef();
+    const lastname = useRef();
     const email = useRef();
     const phonenumber = useRef();
     const linkedin = useRef();
     const github = useRef();
-    console.log(basicdetails)
+    console.log(basicInfoDetails)
  
     const submitHandler = (e) =>{
-        setBasicdetails({...basicdetails,fname:firstname.current.value});
-        // e.preventDefault();
-        alert(basicdetails.fname)
-        console.log(basicdetails.fname)
+        setBasicInfoDetails({...basicInfoDetails,
+            fname:firstname.current.value,
+            lname:lastname.current.value,
+            email:email.current.value,
+            phoneNumber:phonenumber.current.value,
+            linkedin:linkedin.current.value,
+            github:github.current.value   
+        });
+
+            e.preventDefault();
+        // alert(basicdetails.fname)
+        // console.log(basicdetails.fname)
     }
     
 
@@ -28,12 +38,12 @@ function BasicInformation({setBasicdetails,...basicdetails}) {
             <div className='main-label-input'>
                 <div className='label-input'>
                     <label>First Name </label>
-                    <input ref={firstname} type="text" placeholder='eg : John' />
+                    <input ref={firstname} type="text" placeholder='eg : John'/>
                 </div>
 
                 <div className='label-input'>
                     <label>Last Name </label>
-                    <input ref={lname} type="text" placeholder='eg : William' />
+                    <input ref={lastname} type="text" placeholder='eg : William' />
                 </div>
 
                 

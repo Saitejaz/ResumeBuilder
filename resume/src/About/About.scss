@@ -1,0 +1,21 @@
+.about-div{
+    border:1px solid red;
+    display:flex;
+    justify-content: space-around;
+    
+    flex-wrap:wrap;
+    h2{
+        margin:0px;
+        text-align: center;;
+    }
+    textarea{
+        min-width:220px;
+        min-height:120px;
+        max-width:400px;
+        max-height: 300px;
+    }
+    button{
+        display:block;
+    }
+    
+}
