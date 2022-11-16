@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./App.scss";
 import BasicInformation from "./BasicInformation/BasicInformation";
 import Education from "./Education/Education";
@@ -8,12 +8,13 @@ import Skills from "./Skills/Skills";
 import Experience from "./Experience/Experience";
 import Projects from "./Projects/Projects";
 import Editor from "./Editor/Editor";
-
+import Print from "react-to-print";
 
 function App() {
 
  
   // const [basicdetails, setBasicdetails] = useState(basicInfoDetials);
+  const download = useRef();
   const navigate = useNavigate();
 
   const navigateto = (value) => {
@@ -22,9 +23,10 @@ function App() {
 
   return (
     <div className="main-div">
+      <div style={{backgroundColor:"black"}}>
       <ul>
         <button onClick={() => navigateto("")}>
-          <li>Basic-information</li>
+          <li>BasicInfo</li>
         </button>
 
         <button onClick={() => navigateto("about")}>
@@ -53,6 +55,7 @@ function App() {
           <li>Download Resume</li>
         </button>
       </ul>
+      </div>
       <div className="editor-info">
         <div className="info-display">
           <Routes>
@@ -71,9 +74,15 @@ function App() {
           </Routes>
         </div>
 
-        <div className="editor">
+        <div className="editor" ref={download}>
           <Editor />
+          
         </div>
+        <div>
+       <Print trigger = {()=>
+        <button>DOWNLOAD </button>
+      } content = {()=>download.current}/>
+    </div>
       </div>
     </div>
   );

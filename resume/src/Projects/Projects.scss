@@ -1,0 +1,35 @@
+.projects-heading{
+    text-align: center;
+}
+
+.project-label-input{
+    margin:20px;
+    
+    
+    label{
+        display:block;
+        font-weight: 900;
+    }
+    input{
+        height:27px;
+        border-radius:8px;
+    }
+    
+}
+
+.project-description{
+        
+   border:2px solid red;
+   margin:20px;
+  label{
+    display: block;
+  
+  }
+    textarea{
+       
+        min-width:220px;
+        min-height:120px;
+        max-width:400px;
+        max-height: 300px;
+    }
+}

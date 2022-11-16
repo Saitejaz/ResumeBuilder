@@ -31,7 +31,7 @@ function BasicInformation() {
     
 
     return (
-        <div>
+        <div className='basicinfo-container'>
               <h2 className='heading'>Basic Information</h2>
             <form onSubmit={submitHandler}>
 

@@ -1,35 +1,35 @@
 .basic-information-section-name-div {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
-    // height:60px;
+    // border: 2px solid red;
+    
     width: 100%;
 
-    // position:absolute;
+   
     h1 {
         text-align: center;
         font-size: 37px;
         font-weight: 900;
-        border: 1px solid grey;
-        // margin-bottom: -10px;
+        // border: 1px solid grey;
+       
         margin-bottom:0
     }
 
     .basic-information-section-name-subdiv {
-        border: 2px solid green;
+        // border: 2px solid green;
         display:flex;
         justify-content: center;
     }
 }
 .about-section{
-    border:2px solid red;
+    // border:2px solid red;
     .about-heading {
         margin-left:20px;
         font-weight: 900;
         font-size: 20px;
     }
     .editor-about-div{
-        border:2px solid red;
+        // border:2px solid red;
         min-height:40px;
         max-height:80px;
         text-align: center;
@@ -39,7 +39,7 @@
 }
 
 .education-section{
-    border:2px solid red;
+    // border:2px solid red;
     .education-head {
         margin-left:20px;
         font-weight: 900;
@@ -50,6 +50,98 @@
 
         table {
             border-collapse: collapse;
+            
         }
     }
 }
+
+.skills-section{
+    // border:2px solid red;
+    
+    .skills-head{
+        margin-left:20px;
+        font-weight: 900;
+        font-size: 20px;
+        
+    }
+ 
+    .editor-skills-div{
+        margin-left: 20px;
+        margin-right: 20px;
+        // border:2px solid green;
+    
+     
+       
+            ul{
+                // border: 1px solid blue;
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 90%;
+                justify-content: space-between;
+            
+                li{
+                    margin:4px;
+                    // border:1px solid grey;
+                    min-width:100px;
+                    list-style: disc;
+                }
+            }
+        
+    }
+}
+
+.experience-section{
+    // border:2px solid red;
+    .experience-head{
+        margin-left:20px;
+        font-weight: 900;
+        font-size: 20px;
+        
+    }
+    .editor-experience-div{
+        margin-left: 20px;
+        margin-right: 20px;
+        // border:2px solid green;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        align-items: center;
+        max-width: 80%;
+        div{
+            // border:2px solid cyan;
+            min-width: 40%;
+            text-align: center;
+            margin:2px;
+        }
+    }
+}
+
+.projects-section{
+    // border:2px solid red;
+    .projects-head{
+        margin-left:20px;
+        font-weight: 900;
+        font-size: 20px;
+        
+    }
+    h4{
+        margin: 0;
+    }
+    .editor-projects-div{
+        margin-left: 20px;
+        margin-right: 20px;
+        // border:2px solid green;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        align-items: center;
+        max-width: 80%;
+        div{
+            // border:2px solid cyan;
+            min-width: 45%;
+            text-align: center;
+            margin:2px;
+        }
+    }
+}
+

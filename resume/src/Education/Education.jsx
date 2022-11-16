@@ -9,11 +9,11 @@ function Education() {
   const percentage = useRef();
   console.log(educationdetails)
   const submitHandler = (e) =>{
-     setEducationdetails({...educationdetails,
+     setEducationdetails([...educationdetails,{
       instituteName:instituteName.current.value,
       passoutyear:passoutyear.current.value,
       percentage:percentage.current.value,
-    })
+  }])
     e.preventDefault();
   }
   return (

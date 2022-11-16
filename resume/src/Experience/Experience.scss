@@ -1,0 +1,21 @@
+.experience-heading{
+    text-align: center;
+}
+.experience-label-input-div{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border:2px solid cyan;
+    
+}
+.experience-label-input{
+    margin:20px;
+    label{
+        display:block;
+        font-weight: 900;
+    }
+    input{
+        height:27px;
+        border-radius:8px;
+    }
+}
