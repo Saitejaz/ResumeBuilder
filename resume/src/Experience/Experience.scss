@@ -5,17 +5,25 @@
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border:2px solid cyan;
+    // border:2px solid cyan;
     
 }
 .experience-label-input{
     margin:20px;
     label{
+        margin-left:4%;
         display:block;
         font-weight: 900;
     }
     input{
+        margin:4%;
         height:27px;
         border-radius:8px;
+    }
+}
+
+.exp-form{
+    button{
+        margin-left:45%;
     }
 }

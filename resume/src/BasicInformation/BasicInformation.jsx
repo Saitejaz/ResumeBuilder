@@ -25,6 +25,12 @@ function BasicInformation() {
         });
 
             e.preventDefault();
+            firstname.current.value="";
+            lastname.current.value="";
+            email.current.value="";
+            phonenumber.current.value="";
+            linkedin.current.value="";
+            github.current.value="";
         // alert(basicdetails.fname)
         // console.log(basicdetails.fname)
     }
@@ -33,48 +39,45 @@ function BasicInformation() {
     return (
         <div className='basicinfo-container'>
               <h2 className='heading'>Basic Information</h2>
+              <hr/>
             <form onSubmit={submitHandler}>
 
             <div className='main-label-input'>
                 <div className='label-input'>
                     <label>First Name </label>
-                    <input ref={firstname} type="text" placeholder='eg : John'/>
+                    <input ref={firstname} type="text" placeholder='eg : John' required/>
                 </div>
 
                 <div className='label-input'>
                     <label>Last Name </label>
-                    <input ref={lastname} type="text" placeholder='eg : William' />
+                    <input ref={lastname} type="text" placeholder='eg : William' required/>
                 </div>
 
                 
                 <div className='label-input'>
                     <label>Email</label>
-                    <input ref={email} type="email"placeholder='eg : John@gmail.com' />
+                    <input ref={email} type="email"placeholder='eg : John@gmail.com' required/>
                 </div>
 
 
                 
                 <div className='label-input'>
-                    <label>Linkedin</label>
-                    
+                    <label>Linkedin</label> 
                     <input ref={linkedin} type="text" placeholder='linkedin url...' />
-                    
                 </div>
 
 
                 
                 <div className='label-input'>
                     <label>Mobile Number </label>
-                    <input ref={phonenumber} placeholder='eg : 9876543213' />
+                    <input ref={phonenumber} placeholder='eg : 9876543213' required/>
                 </div>
 
 
                 
                 <div className='label-input'>
                     <label>Github </label>
-                    
                     <input ref={github} placeholder='eg : John' />
-                    
                 </div>
 
 
@@ -86,3 +89,4 @@ function BasicInformation() {
 }
 
 export default BasicInformation
+

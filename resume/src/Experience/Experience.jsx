@@ -22,7 +22,8 @@ function Experience() {
   return (
     <div>
        <h2 className='experience-heading'>Experience</h2>
-       <form onSubmit={submitHandler}>
+       <hr/>
+       <form className='exp-form' onSubmit={submitHandler}>
          <div className='experience-label-input-div'>
             <div className='experience-label-input'>
               <label>Company Name</label>

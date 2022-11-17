@@ -15,10 +15,14 @@ function Education() {
       percentage:percentage.current.value,
   }])
     e.preventDefault();
+    instituteName.current.value="";
+    passoutyear.current.value="";
+    percentage.current.value="";
   }
   return (
-    <div >
+    <div className='education'>
       <h2 className='education-heading'>Education</h2>
+      <hr/>
       <form onSubmit={submitHandler}>
         <div className='edu-label-input-div'>
           <div className='edu-label-input'>
@@ -35,7 +39,7 @@ function Education() {
           </div>
         </div>
         <div>
-          <button type="submit">Add</button>
+          <button type="submit">Save</button>
         </div>
       </form>
     </div>

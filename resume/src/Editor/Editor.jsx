@@ -20,7 +20,7 @@ function Editor() {
   return (
     <div>
     <div >
-      <section >
+      <section style={{backgroundColor:"#D8DDDE"}}>
         <div className='basic-information-section-name-div'>
           <div>
             <h1 className='test'>{basicdetails.fname} &nbsp;{basicdetails.lname}</h1>
@@ -34,8 +34,11 @@ function Editor() {
           </div>
         </div>
       </section>
-     <br/>
-      <section>
+      <hr style={{width:"100%" ,height:"2px" ,backgroundColor:"black" , margin:"0"}}></hr>
+
+      <br/>
+
+      <section style={{backgroundColor:"#D8DDDE"}} >
         <div className='about-section'>
           <div className='about-heading'><label>About</label></div>
           <div className='editor-about-div'>
@@ -46,13 +49,13 @@ function Editor() {
 
       <br/>
 
-      <section>
+      <section style={{backgroundColor:"#D8DDDE"}}>
         <div className="education-section">
           <div className='education-head'><label>Education</label></div>
           <div className="editor-edu-div">
-            <table border="1" align='center' width="80%">
+            <table border="1" align='center' width="80%" style={{border:"2px solid grey",backgroundColor:"#D8DDDE"}}>
 
-              <tr>
+              <tr style={{backgroundColor:"white"}}>
                 <td>Institute Name</td>
                 <td>Year of Passout</td>
                 <td>Percentage Obtained</td>
@@ -63,7 +66,7 @@ function Editor() {
                   educationdetails.map((item) => {
                     return (
                       <tr>
-                        <td>{item.instituteName}</td>
+                        <td> {item.instituteName}</td>
                         <td>{item.passoutyear}</td>
                         <td>{item.percentage}</td>
                       </tr>
@@ -76,9 +79,9 @@ function Editor() {
         </div>
       </section>
 
- <br/>
+       <br/>
 
-      <section>
+      <section style={{backgroundColor:"#D8DDDE"}} >
         <div className='skills-section'>
           <div className='skills-head'><label>Skills</label></div>
 
@@ -95,8 +98,10 @@ function Editor() {
           </div>
         </div>
       </section>
- <br/>
-      <section>
+
+                <br/>
+
+      <section style={{backgroundColor:"red"}}>
         <div className="experience-section">
           <div className="experience-head"><label>Experience</label></div>
           <div className='editor-experience-div'>
@@ -116,18 +121,20 @@ function Editor() {
         </div>
         {console.log(experience)}
       </section>
+
       <br/>
 
-      <section>
+      <section style={{backgroundColor:"#D8DDDE"}} >
         <div className="projects-section">
           <div className="projects-head"><label>Projects</label></div>
+          <br/>
           <div className='editor-projects-div'>
             {
               projects.map((item) => {
                 return (
                   <div>
-                    <h4>{item.projectName}</h4>
-                    <p>{item.description}</p>
+                    <h4 >{item.projectName}</h4>
+                    <p style={{margin:"0"}}>{item.description}</p>
                   </div>
                 )
               })
@@ -140,13 +147,6 @@ function Editor() {
 
      
     </div>
-    {/* <div>
-       <Print trigger = {()=>
-        <button onClick={()=>{
-
-        }}>DOWNLOAD </button>
-      } content = {()=>download.current}/>
-    </div> */}
     </div>
     
   )

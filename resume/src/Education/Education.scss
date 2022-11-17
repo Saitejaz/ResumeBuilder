@@ -5,17 +5,26 @@
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border:2px solid cyan;
+    // border:2px solid cyan;
     
 }
 .edu-label-input{
     margin:20px;
     label{
+        margin-left:3%;
         display:block;
         font-weight: 900;
     }
     input{
+        margin:2.5%;
         height:27px;
         border-radius:8px;
     }
+    
+}
+.education{
+button{
+    margin-left:40%;
+    width:20%;
+}
 }

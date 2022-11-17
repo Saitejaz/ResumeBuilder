@@ -18,14 +18,15 @@ function Projects() {
   return (
     <div>
       <h2 className='projects-heading'>Projects</h2>
-      <form onSubmit={submitHandler}>
+      <hr/>
+      <form className='projects-form' onSubmit={submitHandler}>
         <div className='project-label-input'>
           <label>Add Project</label>
           <input ref={projectname} type="text" placeholder='eg : library Management' />
         </div>
         <div className='project-description'>
+          
           <label>Project - description</label>
-
           <textarea ref={description} placeholder="Enter project description..."/>
         </div>
         <div>
@@ -37,5 +38,7 @@ function Projects() {
 }
 
 export default Projects
+
+
 
 

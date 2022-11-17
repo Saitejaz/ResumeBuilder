@@ -7,8 +7,7 @@ import About from "./About/About";
 import Skills from "./Skills/Skills";
 import Experience from "./Experience/Experience";
 import Projects from "./Projects/Projects";
-import Editor from "./Editor/Editor";
-import Print from "react-to-print";
+import ViewResume from "./ViewResume/ViewResume";
 
 function App() {
 
@@ -23,7 +22,7 @@ function App() {
 
   return (
     <div className="main-div">
-      <div style={{backgroundColor:"black"}}>
+      <div className="navbar">
       <ul>
         <button onClick={() => navigateto("")}>
           <li>BasicInfo</li>
@@ -51,9 +50,12 @@ function App() {
           <li>Projects</li>
         </button>
 
-        <button>
-          <li>Download Resume</li>
+        <button onClick={() => navigateto("viewresume")}>
+          <li>View Resume</li>
         </button>
+        
+        <li><h4 style={{ margin:"0",marginTop:"15%",color:"white"}}>Welcome!</h4></li>
+
       </ul>
       </div>
       <div className="editor-info">
@@ -71,18 +73,16 @@ function App() {
             <Route path="/skills" element={<Skills />}></Route>
             <Route path="/experience" element={<Experience />}></Route>
             <Route path="/projects" element={<Projects />}></Route>
+            <Route path="/viewresume" element={<ViewResume/>}></Route>
+           
           </Routes>
         </div>
 
-        <div className="editor" ref={download}>
+        {/* <div className="editor" ref={download}>
           <Editor />
           
-        </div>
-        <div>
-       <Print trigger = {()=>
-        <button>DOWNLOAD </button>
-      } content = {()=>download.current}/>
-    </div>
+        </div> */}
+       
       </div>
     </div>
   );

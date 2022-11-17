@@ -1,21 +1,36 @@
 .about-div{
-    border:1px solid red;
+    // border:1px solid red;
     display:flex;
     justify-content: space-around;
+   
     
     flex-wrap:wrap;
+
+       label{
+          display:block;
+          margin-left:20%;
+          font-weight: 900;
+      } 
+
+    form{
+        width:100%;
+    }
     h2{
-        margin:0px;
+        margin-top:10px;
         text-align: center;;
     }
     textarea{
+        margin:2%;
+        margin-left:20%;
         min-width:220px;
         min-height:120px;
         max-width:400px;
         max-height: 300px;
     }
     button{
+        width:20%;
         display:block;
+        margin-left: 20%;
     }
     
 }

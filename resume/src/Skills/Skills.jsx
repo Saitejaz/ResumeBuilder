@@ -13,12 +13,13 @@ function Skills() {
   return (
     <div>
       <h2 className='skills-heading'>Skills</h2>
+      <hr/>
        <form onSubmit={submitHandler}>
        <div className='skill-label-input'>
        <label>Add skill</label>
         <input ref={skill} type="text" placeholder='eg : Reactjs'/>
        </div>
-       <div>
+       <div className='skill-add-button'>
         <button type="submit">Add skill</button>
        </div>
        </form>
