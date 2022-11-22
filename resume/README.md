@@ -1,3 +1,7 @@
+# Resume Builder
+
+![ResumeBuilder](https://user-images.githubusercontent.com/91133773/203236066-6ba10127-b4fd-405d-9546-225aedf40c73.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
